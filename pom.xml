@@ -56,7 +56,7 @@
         <spring-cloud.version>Dalston.SR1</spring-cloud.version>
         <dubbo.version>2.5.8</dubbo.version>
         <mongo.driver.version>3.5.0</mongo.driver.version>
-        <mysql-connector-java>5.1.40</mysql-connector-java>
+        <mysql-connector-java>.0.11</mysql-connector-java>
         <commons-lang3.version>3.3.2</commons-lang3.version>
         <guava.version>21.0</guava.version>
         <spring.data.mongodb.version>1.9.1.RELEASE</spring.data.mongodb.version>
