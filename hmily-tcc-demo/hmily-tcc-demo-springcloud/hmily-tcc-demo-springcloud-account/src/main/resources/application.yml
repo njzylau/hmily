@@ -6,8 +6,8 @@ server:
 
 spring:
     datasource:
-        driver-class-name:  com.mysql.jdbc.Driver
-        url: jdbc:mysql://127.0.0.1:3306/tcc_account?useUnicode=true&characterEncoding=utf8
+        driver-class-name:  com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://127.0.0.1:3306/tcc_account?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
         username: root
         password: 123456
         initialSize: 20
@@ -36,8 +36,8 @@ hmily:
         scheduledThreadMax :  10
         repositorySupport : db
         tccDbConfig :
-                 driverClassName  : com.mysql.jdbc.Driver
-                 url :  jdbc:mysql://127.0.0.1:3306/tcc?useUnicode=true&amp;characterEncoding=utf8
+                 driverClassName  : com.mysql.cj.jdbc.Driver
+                 url :  jdbc:mysql:///tcc?characterEncoding=utf8&useUnicode=true&useSSL=false&serverTimezone=UTC
                  username : root
                  password : 123456
 
