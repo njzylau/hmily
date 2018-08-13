@@ -38,17 +38,26 @@
         <property name="retryMax" value="30"/>
         <property name="scheduledDelay" value="120"/>
         <property name="scheduledThreadMax" value="4"/>
-        <property name="repositorySupport" value="db"/>
-        <property name="tccDbConfig">
-            <bean class="com.hmily.tcc.common.config.TccDbConfig">
-                <property name="url"
-                          value="jdbc:mysql://127.0.0.1:3306/tcc?useUnicode=true&amp;characterEncoding=utf8;serverTimezone=UTC"/>
-                <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-                <property name="username" value="root"/>
-                <property name="password" value="123456"/>
-            </bean>
-        </property>
-    </bean>
+
+        <!--<property name="repositorySupport" value="db"/>-->
+        <!--<property name="tccDbConfig">-->
+            <!--<bean class="com.hmily.tcc.common.config.TccDbConfig">-->
+                <!--<property name="url"-->
+                          <!--value="jdbc:mysql://127.0.0.1:3306/tcc?useUnicode=true&amp;characterEncoding=utf8;serverTimezone=UTC"/>-->
+                <!--<property name="driverClassName" value="com.mysql.jdbc.Driver"/>-->
+                <!--<property name="username" value="root"/>-->
+                <!--<property name="password" value="123456"/>-->
+            <!--</bean>-->
+        <!--</property>-->
+    <!--</bean>-->
+    <property name="repositorySupport" value="mongodb"/>
+    <property name="tccMongoConfig">
+        <bean class="com.hmily.tcc.common.config.TccMongoConfig">
+            <property name="mongoDbUrl"  value="192.168.0.102:27017"/>
+            <property name="mongoDbName" value="happylife"/>
+        </bean>
+    </property>
+</bean>
 
     <!--
        <property name="repositorySupport" value="db" />
@@ -83,15 +92,6 @@
         </property>
 
 
-       <property name="repositorySupport" value="mongodb"/>
-        <property name="tccMongoConfig">
-            <bean class="com.hmily.tcc.common.config.TccMongoConfig">
-                <property name="mongoDbUrl"  value="192.168.1.68:27017"/>
-                <property name="mongoDbName" value="happylife"/>
-                <property name="mongoUserName" value="xiaoyu"/>
-                <property name="mongoUserPwd" value="123456"/>
-            </bean>
-        </property>
 
 
         <property name="repositorySupport" value="file"/>

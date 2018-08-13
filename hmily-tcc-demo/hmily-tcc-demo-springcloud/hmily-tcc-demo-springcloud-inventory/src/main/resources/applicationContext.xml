@@ -38,7 +38,7 @@
         <property name="retryMax" value="3"/>
         <property name="scheduledDelay" value="120"/>
         <property name="scheduledThreadMax" value="4"/>
-        <property name="repositorySupport" value="db"/>
+<!--        <property name="repositorySupport" value="db"/>
         <property name="tccDbConfig">
             <bean class="com.hmily.tcc.common.config.TccDbConfig">
                 <property name="url"
@@ -48,61 +48,71 @@
                 <property name="password" value="Wgj@555888"/>
             </bean>
         </property>
-    </bean>
+    </bean>-->
 
-    <!--
-      <property name="repositorySupport" value="db" />
-       <property name="tccDbConfig">
-           <bean class="com.hmily.tcc.common.config.TccDbConfig">
-               <property name="url"
-                         value="jdbc:mysql://192.168.1.68:3306/tcc?useUnicode=true&amp;characterEncoding=utf8"/>
-               <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-               <property name="password" value="Wgj@555888"/>
-               <property name="username" value="xiaoyu"/>
-           </bean>
-       </property>
+    <property name="repositorySupport" value="mongodb"/>
+    <property name="tccMongoConfig">
+        <bean class="com.hmily.tcc.common.config.TccMongoConfig">
+            <property name="mongoDbUrl"  value="192.168.0.102:27017"/>
+            <property name="mongoDbName" value="happylife"/>
+        </bean>
+    </property>
+</bean>
 
 
-      <property name="repositorySupport" value="redis" />
-       <property name="tccRedisConfig">
-           <bean class="com.hmily.tcc.common.config.TccRedisConfig">
-               <property name="hostName"
-                         value="192.168.1.68"/>
-               <property name="port" value="6379"/>
-               <property name="password" value=""/>
-           </bean>
-       </property>
-
-       <property name="repositorySupport" value="zookeeper"/>
-       <property name="tccZookeeperConfig">
-           <bean class="com.hmily.tcc.common.config.TccZookeeperConfig">
-               <property name="host"  value="192.168.1.73:2181"/>
-               <property name="sessionTimeOut" value="100000"/>
-               <property name="rootPath" value="/tcc"/>
-           </bean>
-       </property>
+        <!--
+          <property name="repositorySupport" value="db" />
+           <property name="tccDbConfig">
+               <bean class="com.hmily.tcc.common.config.TccDbConfig">
+                   <property name="url"
+                             value="jdbc:mysql://192.168.1.68:3306/tcc?useUnicode=true&amp;characterEncoding=utf8"/>
+                   <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+                   <property name="password" value="Wgj@555888"/>
+                   <property name="username" value="xiaoyu"/>
+               </bean>
+           </property>
 
 
-      <property name="repositorySupport" value="mongodb"/>
-       <property name="tccMongoConfig">
-           <bean class="com.hmily.tcc.common.config.TccMongoConfig">
-               <property name="mongoDbUrl"  value="192.168.1.68:27017"/>
-               <property name="mongoDbName" value="happylife"/>
-               <property name="mongoUserName" value="xiaoyu"/>
-               <property name="mongoUserPwd" value="123456"/>
-           </bean>
-       </property>
+          <property name="repositorySupport" value="redis" />
+           <property name="tccRedisConfig">
+               <bean class="com.hmily.tcc.common.config.TccRedisConfig">
+                   <property name="hostName"
+                             value="192.168.1.68"/>
+                   <property name="port" value="6379"/>
+                   <property name="password" value=""/>
+               </bean>
+           </property>
+
+           <property name="repositorySupport" value="zookeeper"/>
+           <property name="tccZookeeperConfig">
+               <bean class="com.hmily.tcc.common.config.TccZookeeperConfig">
+                   <property name="host"  value="192.168.1.73:2181"/>
+                   <property name="sessionTimeOut" value="100000"/>
+                   <property name="rootPath" value="/tcc"/>
+               </bean>
+           </property>
 
 
-       <property name="repositorySupport" value="file"/>
-       <property name="tccFileConfig">
-           <bean class="com.hmily.tcc.common.config.TccFileConfig">
-               <property name="path"  value="/account"/>
-               <property name="prefix" value="account"/>
-           </bean>
-       </property>
+          <property name="repositorySupport" value="mongodb"/>
+           <property name="tccMongoConfig">
+               <bean class="com.hmily.tcc.common.config.TccMongoConfig">
+                   <property name="mongoDbUrl"  value="192.168.1.68:27017"/>
+                   <property name="mongoDbName" value="happylife"/>
+                   <property name="mongoUserName" value="xiaoyu"/>
+                   <property name="mongoUserPwd" value="123456"/>
+               </bean>
+           </property>
 
 
-    -->
+           <property name="repositorySupport" value="file"/>
+           <property name="tccFileConfig">
+               <bean class="com.hmily.tcc.common.config.TccFileConfig">
+                   <property name="path"  value="/account"/>
+                   <property name="prefix" value="account"/>
+               </bean>
+           </property>
+
+
+        -->
 
 </beans>
